@@ -1,0 +1,25 @@
+<h2>Cliente list</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Nome</th>
+            <th> Cognome</th>
+            <th> Email</th>
+            <th> Password</th>
+            <th>Dettagli</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of clienti">
+            <td> {{cliente.nome}}</td>
+            <td> {{cliente.cognome}}</td>
+            <td> {{cliente.email}}</td>
+            <td> {{cliente.password}}</td>
+            <td>
+                <button  class="btn btn-info" (click)="clienteDetails(cliente.id)">Dettagli</button>
+                <button  class="btn btn-info" (click)="prentoazioniCliente(cliente.id)">Prenotazioni</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
